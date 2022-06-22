@@ -3,13 +3,7 @@ import math
 
 
 def climb(hight):
-    hight_as_binary = str(bin(hight)).replace("0b", "")[::-1]
-    cntr = 1
-    steps_by_2 = 0
-    for num in hight_as_binary[1:]:
-        if num == "1":
-            steps_by_2 += cntr
-        cntr += 1
+    steps_by_2 = int(hight // 2)
     if hight % 2 == 1:
         tail = "1"
     else:
